@@ -1,0 +1,13 @@
+autobahn_api_url: "https://autobahn.api.bund.dev/"
+
+# placeholder for LLM API details
+llm_api_key: "YOUR_LLM_API_KEY"
+llm_model: "your-model"
+
+# placeholder for e-Mail server details
+smtp_server: "YOUR_SMTP_SERVER"
+smtp_port: 587  # standardport for TLS
+smtp_username: "YOUR_SMTP_USERNAME"
+smtp_password: "YOUR_SMTP_PASSWORD"
+sender_email: "your_email@example.com"
+receiver_email: "police_email@example.com"
