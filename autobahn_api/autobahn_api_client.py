@@ -61,6 +61,22 @@ class AutobahnApiClient:
         Retrieves the details of a specific block.
         """
         return self._get(f"/details/closure/{closure_id}")
+    
+    def get_all_data(self):
+        """
+        Retrieves roadworks, warnings and closures for all highways.
+        """
+        roads = self.get_available_roads()
+        roads_data = dict()
+        for road_id in roads["roads"]:
+            roadworks = self.get_roadworks(road_id)
+            warnings = self.get_warnings(road_id)
+            closures = self.get_closures(road_id)
+            road_dict = {**roadworks, **warnings, **closures}
+            # roads_data.update(road_dict)
+            roads_data[road_id] = road_dict
+
+        return roads_data
 
 
 
@@ -82,19 +98,19 @@ if __name__ == "__main__":
 
     road_id_example = "A8"  # example highway for Stuttgart
 
-    print(f"\n Construction sites on the {road_id_example}:")
-    roadworks = client.get_roadworks(road_id_example)
-    if roadworks:
-        print(json.dumps(roadworks, indent=4, ensure_ascii=False))
-    else:
-        print(f"Could not retrieve any construction sites on the {road_id_example}.")
+    # print(f"\n Construction sites on the {road_id_example}:")
+    # roadworks = client.get_roadworks(road_id_example)
+    # if roadworks:
+    #     print(json.dumps(roadworks, indent=4, ensure_ascii=False))
+    # else:
+    #     print(f"Could not retrieve any construction sites on the {road_id_example}.")
 
-    print(f"\nTraffic reports on the {road_id_example}:")
-    warnings = client.get_warnings(road_id_example)
-    if warnings:
-        print(json.dumps(warnings, indent=4, ensure_ascii=False))
-    else:
-        print(f"Could not retrieve any traffic reports on the {road_id_example}.")
+    # print(f"\nTraffic reports on the {road_id_example}:")
+    # warnings = client.get_warnings(road_id_example)
+    # if warnings:
+    #     print(json.dumps(warnings, indent=4, ensure_ascii=False))
+    # else:
+    #     print(f"Could not retrieve any traffic reports on the {road_id_example}.")
 
     print(f"\nClosures on the {road_id_example}:")
     closures = client.get_closures(road_id_example)
