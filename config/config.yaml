@@ -1,4 +1,3 @@
-#autobahn_api_url: "https://autobahn.api.bund.dev"
 autobahn_api_url: "https://verkehr.autobahn.de/o/autobahn"
 
 # placeholder for LLM API details
