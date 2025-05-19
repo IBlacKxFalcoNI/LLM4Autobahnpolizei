@@ -1,8 +1,9 @@
 autobahn_api_url: "https://verkehr.autobahn.de/o/autobahn"
 
 # placeholder for LLM API details
-llm_api_key: "YOUR_LLM_API_KEY"
-llm_model: "your-model"
+# Use .env instead! # llm_api_key: "YOUR_LLM_API_KEY"
+# llm_model: "your-model"
+llm_model: "gemini-2.0-flash-lite"
 
 # placeholder for e-Mail server details
 smtp_server: "YOUR_SMTP_SERVER"
