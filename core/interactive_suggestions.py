@@ -46,7 +46,7 @@ def autobahn_selection():
 
     autobahn_id_dict = {**roadworks, **warnings, **closures}
 
-    print(f"Auf der Autobahn {autobahn_id} liegen {len(autobahn_id_dict["roadworks"])} Baustelle(n), {len(warnings["warning"])} Verkehrsmeldung(en) und {len(closures["closure"])} Sperrung(en) vor.")
+    print(f'Auf der Autobahn {autobahn_id} liegen {len(autobahn_id_dict["roadworks"])} Baustelle(n), {len(warnings["warning"])} Verkehrsmeldung(en) und {len(closures["closure"])} Sperrung(en) vor.')
 
 
 def advanced_autobahn_selection():
@@ -77,7 +77,7 @@ def advanced_autobahn_selection():
             print(f"Ungültige Eingabe {autobahn_string} . Bitte geben Sie eine Autobahn aus der Liste ein.")
 
     autobahn_id = autobahn_string
-    print(f"Auf der Autobahn {autobahn_id} liegen {len(autobahn_data[autobahn_id]["roadworks"])} Baustelle(n), {len(autobahn_data[autobahn_id]["warning"])} Verkehrsmeldung(en) und {len(autobahn_data[autobahn_id]["closure"])} Sperrung(en) vor.")
+    print(f'Auf der Autobahn {autobahn_id} liegen {len(autobahn_data[autobahn_id]["roadworks"])} Baustelle(n), {len(autobahn_data[autobahn_id]["warning"])} Verkehrsmeldung(en) und {len(autobahn_data[autobahn_id]["closure"])} Sperrung(en) vor.')
 
 
 if __name__ == "__main__":

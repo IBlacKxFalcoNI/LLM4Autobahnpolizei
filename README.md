@@ -7,3 +7,19 @@ autobahn_api/: Interaktion mit der Autobahn-API
 email_notifier/: Versenden der E-Mails
 
 LLM_integration/: Interaktion der LLM-API 
+
+# Installation
+
+In the top level directory, run:
+
+``̀ 
+pip install -e .
+```
+
+Set your Gemini API key in environment variable `GEMINI_API_KEY`.
+
+# Usage
+
+``̀ 
+python core/interactive_suggestions.py
+```

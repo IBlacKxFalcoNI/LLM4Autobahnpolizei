@@ -69,12 +69,15 @@ class AutobahnApiClient:
         roads = self.get_available_roads()
         roads_data = dict()
         for road_id in roads["roads"]:
+            print(f"Fetching data for {road_id}...", end="", flush=True)
             roadworks = self.get_roadworks(road_id)
             warnings = self.get_warnings(road_id)
             closures = self.get_closures(road_id)
             road_dict = {**roadworks, **warnings, **closures}
             # roads_data.update(road_dict)
             roads_data[road_id] = road_dict
+            
+            print(f"done ({len(road_dict)} items).")
 
         return roads_data
 
