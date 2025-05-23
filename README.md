@@ -12,7 +12,7 @@ LLM_integration/: Interaktion der LLM-API
 
 In the top level directory, run:
 
-``̀ 
+``` 
 pip install -e .
 ```
 
