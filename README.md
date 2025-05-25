@@ -20,6 +20,7 @@ Set your Gemini API key in environment variable `GEMINI_API_KEY`.
 
 # Usage
 
-``̀ 
+```
 python core/interactive_suggestions.py
 ```
+Running the code allows you to select a highway and a type of hazard for which an operation suggestion will be generated.
