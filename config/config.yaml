@@ -3,12 +3,12 @@ autobahn_api_url: "https://verkehr.autobahn.de/o/autobahn"
 # placeholder for LLM API details
 # Use .env instead! # llm_api_key: "YOUR_LLM_API_KEY"
 # llm_model: "your-model"
-llm_model: "gemini-2.0-flash-lite"
+llm_model: "gemini-2.0-flash"
 
 # placeholder for e-Mail server details
 smtp_server: "YOUR_SMTP_SERVER"
 smtp_port: 587  # standardport for TLS
 smtp_username: "YOUR_SMTP_USERNAME"
-smtp_password: "YOUR_SMTP_PASSWORD"
+smtp_password: "YOUR_SMTP_PASSWORD" # Use .env instead!
 sender_email: "your_email@example.com"
 receiver_email: "police_email@example.com"

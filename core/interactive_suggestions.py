@@ -153,7 +153,7 @@ def advanced_autobahn_selection():
     print(f"Generiere E-Mail-Inhalt für {autobahn_id} mit Gemini...")
     generated_email_content = llm_handler.generate_response(email_prompt)
     if generated_email_content:
-        print(f"E-Mail-Inhalt für {autobahn_id} generiert. Inhalt wird nicht versendet. Hier der Inhalt: ")
+        print(f"E-Mail-Inhalt für {autobahn_id} generiert. Inhalt wird nicht versendet. Hier der Inhalt: \n")
         print(generated_email_content)
     else:
         print(f"Konnte keinen E-Mail-Inhalt für Autobahn {autobahn_id} generieren.")
