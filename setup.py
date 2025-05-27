@@ -11,6 +11,7 @@ setup(
         "PyYAML>=6.0",  # Config
         "requests>=2.31.0",  # HTTP and API
         "openai>=1.17.1",  # LLM
+        "google-generativeai>=0.3.0,<1.0.0",  # Gemini LLM
     ],
     python_requires=">=3.9",
 )
